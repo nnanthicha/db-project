@@ -11,7 +11,7 @@ CREATE TABLE user(
     name VARCHAR(100) NOT NULL,
     phone_number VARCHAR(10) NOT NULL,
     PRIMARY KEY (uid, email),
-    FOREIGN KEY (email) REFERENCES user_account(email)
+    FOREIGN KEY (email) REFERENCES user_account(email) ON DELETE CASCADE ON UPDATE CASCADE
 );
 ALTER TABLE user
 ADD CONSTRAINT user_email_unique UNIQUE (email);
