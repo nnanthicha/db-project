@@ -73,9 +73,9 @@ CREATE TABLE `order`(
     order_id BIGINT NOT NULL,
     status ENUM(
         'pending',
-        'accepted',
         'rejected',
         'preparing',
+        'delivery',
         'completed'
     ) NOT NULL,
     grand_total DECIMAL NOT NULL,
