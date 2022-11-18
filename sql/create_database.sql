@@ -47,7 +47,7 @@ CREATE TABLE restaurant(
     address_id BIGINT NOT NULL,
     PRIMARY KEY (uid),
     FOREIGN KEY (uid) REFERENCES user(uid),
-    FOREIGN KEY (uid) REFERENCES address(address_id)
+    FOREIGN KEY (address_id) REFERENCES address(address_id)
 );
 CREATE TABLE delivery_person(
     uid BIGINT NOT NULL,
