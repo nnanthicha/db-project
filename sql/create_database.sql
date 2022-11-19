@@ -31,7 +31,7 @@ CREATE TABLE `address`(
     district VARCHAR(100) NOT NULL,
     province VARCHAR(100) NOT NULL,
     PRIMARY KEY (address_id),
-    FOREIGN KEY (sub_district,district,province) REFERENCES address_detail(sub_district,district, province)
+    FOREIGN KEY (sub_district, district, province) REFERENCES address_detail(sub_district, district, province)
 );
 CREATE TABLE area(
     area_id BIGINT NOT NULL,
@@ -39,12 +39,13 @@ CREATE TABLE area(
     district VARCHAR(100) NOT NULL,
     province VARCHAR(100) NOT NULL,
     PRIMARY KEY (sub_district, district, province),
-    FOREIGN KEY (sub_district,district,province) REFERENCES address_detail(sub_district,district, province)
+    FOREIGN KEY (sub_district, district, province) REFERENCES address_detail(sub_district, district, province)
 );
 CREATE INDEX area_id_index ON area(area_id);
 CREATE TABLE restaurant(
     uid BIGINT NOT NULL,
     address_id BIGINT NOT NULL,
+    status ENUM("Closed", "Open") NOT NULL,
     PRIMARY KEY (uid),
     FOREIGN KEY (uid) REFERENCES user(uid),
     FOREIGN KEY (address_id) REFERENCES address(address_id)
