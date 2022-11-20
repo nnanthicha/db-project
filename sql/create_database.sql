@@ -102,11 +102,11 @@ CREATE TABLE menu(
 CREATE TABLE restaurant_order(
     rest_order_id BIGINT NOT NULL,
     order_id BIGINT NOT NULL,
-    menu_id BIGINT NOT NULL,
+    restaurant_id BIGINT NOT NULL,
     total_price DECIMAL NOT NULL,
     PRIMARY KEY (rest_order_id),
     FOREIGN KEY (order_id) REFERENCES `order`(order_id),
-    FOREIGN KEY (menu_id) REFERENCES menu(menu_id)
+    FOREIGN KEY (restaurant_id) REFERENCES restaurant(restaurant_id)
 );
 CREATE TABLE restaurant_order_menu(
     rest_order_id BIGINT NOT NULL,
