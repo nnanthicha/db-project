@@ -106,7 +106,7 @@ CREATE TABLE restaurant_order(
     total_price DECIMAL NOT NULL,
     PRIMARY KEY (rest_order_id),
     FOREIGN KEY (order_id) REFERENCES `order`(order_id),
-    FOREIGN KEY (restaurant_id) REFERENCES restaurant(restaurant_id)
+    FOREIGN KEY (restaurant_id) REFERENCES restaurant(uid)
 );
 CREATE TABLE restaurant_order_menu(
     rest_order_id BIGINT NOT NULL,
