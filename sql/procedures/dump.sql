@@ -227,7 +227,7 @@ CREATE TABLE `delivery_person` (
 
 LOCK TABLES `delivery_person` WRITE;
 /*!40000 ALTER TABLE `delivery_person` DISABLE KEYS */;
-INSERT INTO `delivery_person` VALUES (1,'asdof','not accepting',1),(2,'abcde','not accepting',1),(3,'uomkf','waiting for restaurant',2),(4,'ijfdf','waiting for restaurant',2);
+INSERT INTO `delivery_person` VALUES (1,'asdof','not accepting',1),(2,'abcde','not accepting',1),(3,'uomkf','waiting for restaurant',1),(4,'ijfdf','waiting for restaurant',2);
 /*!40000 ALTER TABLE `delivery_person` ENABLE KEYS */;
 UNLOCK TABLES;
 
