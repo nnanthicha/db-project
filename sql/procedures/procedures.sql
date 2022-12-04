@@ -3,7 +3,8 @@ create procedure query_delivery_person_by_area (IN q_area_id BIGINT)
 begin
     select * from delivery_person where area_id = q_area_id;
 end$$
-delimiter;
+
+delimiter ;
 
 call query_delivery_person_by_area(1);
 
@@ -18,5 +19,6 @@ begin
     commit;
 end$$
 
-call update_delivery_person_area(3,2);
+delimiter ;
 
+call update_delivery_person_area(3,2);
